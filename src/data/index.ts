@@ -1,21 +1,20 @@
-import BookingWebSite from "../assets/bookingWebSite.webp";
-import mui from "../assets/mui.svg";
+// import mui from "../assets/mui.svg";
 import react from "../assets/re.svg";
 import ts from "../assets/ts.svg";
 import next from "../assets/next.svg";
-import mysql from "../assets/mysql.svg";
+// import mysql from "../assets/mysql.svg";
 import js from "../assets/js.svg";
 import tw from "../assets/tail.svg";
-import vite from "../assets/vite.svg";
+// import vite from "../assets/vite.svg";
 import three from "../assets/three.svg";
 import scss from "../assets/scss.svg";
 import videocall from "../assets/videocall.webp";
 import firebase from "../assets/firebase.svg";
-import hostinger from "../assets/hostinger.svg";
-import wordpress from "../assets/wordpress.svg";
+// import hostinger from "../assets/hostinger.svg";
+// import wordpress from "../assets/wordpress.svg";
 import webrtc from "../assets/webrtc.svg";
 import code from "../assets/code.svg";
-import link from "../assets/link.svg";
+// import link from "../assets/link.svg";
 import git from "../assets/git.svg";
 import redux from "../assets/redux.svg";
 import html from "../assets/html.svg";
@@ -44,7 +43,7 @@ export const projects = [
         title: "Video Call App",
         description:
             "A video call app that allows users to make video calls with their friends and family in a P2P style. It uses WebRTC for the video streaming and Firebase for the backend.",
-        // codebaseUrl: "#",
+        codebaseUrl: "",
         liveUrl: "https://soloconvo.vercel.app/",
         techStack: [
             { icon: ts, name: "Typescript" },
