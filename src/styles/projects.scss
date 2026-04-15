@@ -1,0 +1,118 @@
+@import "./_variables.scss";
+
+#projects {
+    position: relative;
+}
+
+.projects-container {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+    position: relative;
+
+    .project {
+        z-index: 5;
+        height: 500px;
+        width: calc(100% - 40px);
+        border: 1px solid $main_border_color;
+        border-radius: $border_radius;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        background-color: $secondary_background_color;
+
+        .project-image-box {
+            width: 100%;
+            height: 60%;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+
+            .project-image {
+                width: 100%;
+                height: 100%;
+                border-radius: 10px;
+                object-fit: cover;
+                pointer-events: none;
+            }
+        }
+
+        .project-description {
+            margin-top: 10px;
+
+            h3 {
+                color: $main_text_color;
+                font-size: $lg_text_medium;
+                margin-bottom: 0px;
+            }
+
+            p {
+                margin-top: 0px;
+                color: $dark_text_color;
+                font-size: $sm_text_medium;
+                margin-top: 10px;
+            }
+        }
+
+        .project-details {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .project-tech-stack {
+                position: relative;
+                height: calc(25px + 2 * 8px);
+                .project-tech-icon {
+                    position: absolute;
+                    width: 25px;
+                    height: 25px;
+                    padding: 8px;
+                    border-radius: 50%;
+                    border: 1px solid $main_border_color;
+                    z-index: 10;
+                    backdrop-filter: blur(10px);
+                    background: linear-gradient(
+                        90deg,
+                        rgba(45, 45, 61, 0.47) 0%,
+                        rgba(1, 3, 28, 1) 65%
+                    );
+                }
+            }
+
+            .project-urls {
+                display: flex;
+                align-items: center;
+                gap: 20px;
+                a {
+                    color: $secondary_text_color;
+                    text-decoration: none;
+                    font-size: $lg_text_medium;
+                    gap: 5px;
+                    display: flex;
+                    align-items: center;
+                    transition: all 0.3s ease-in-out;
+
+                    &:hover {
+                        transform: translateY(-2px);
+                    }
+                }
+                @media (max-width: $md) {
+                    a {
+                        font-size: $md_text_medium;
+                    }
+
+                    gap: 15px;
+                }
+            }
+        }
+    }
+
+    // @media (max-width: $lg) {
+
+    // }
+    @media (max-width: $md) {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

@@ -1,0 +1,175 @@
+@import "./_variables.scss";
+
+.about-container {
+    // height: 90svh;
+    display: flex;
+    gap: 20px;
+    position: relative;
+    align-items: center;
+
+    .about-text {
+        width: calc(50% - 40px);
+        height: fit-content;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        border-radius: $border-radius;
+        border: 1px solid $main_border_color;
+        position: relative;
+        background-color: $secondary_background_color;
+        z-index: 3;
+
+        .about-text-code {
+            margin-top: 20px;
+            font-size: $lg_text_medium;
+
+            .white {
+                color: white;
+            }
+            .red {
+                color: rgb(255, 110, 110);
+            }
+            .green {
+                color: rgb(99, 250, 99);
+            }
+            .orange {
+                color: rgb(231, 144, 15);
+            }
+            .yellow {
+                color: rgb(255, 243, 81);
+            }
+
+            span,
+            p,
+            div {
+                opacity: 0;
+            }
+            .about-text-list {
+                margin-left: 35px;
+
+                p {
+                    margin: 0 0 0 35px;
+                }
+            }
+        }
+    }
+
+    .about-skills {
+        width: calc(60% - 40px);
+        display: flex;
+        height: 500px;
+        position: relative;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .skills-wheel {
+            color: white;
+            position: relative;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .world-img {
+                width: 100px;
+                height: 100px;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+
+            .outer-circle {
+                height: calc(500px - 100px);
+                width: calc(500px - 100px);
+                border-radius: 50%;
+                border: 1px solid $main_border_color;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                .inner-circle {
+                    height: calc(500px - 220px);
+                    width: calc(500px - 220px);
+                    border-radius: 50%;
+                    border: 1px solid $main_border_color;
+                }
+            }
+
+            .skills-item {
+                position: absolute;
+                height: 50%;
+                display: flex;
+
+                .skills-item-inner {
+                    width: 45px;
+                    height: 45px;
+                    padding: 5px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background-color: $secondary_background_color;
+                    border-radius: $border-radius;
+                    border: 1px solid $main_border_color;
+                }
+            }
+        }
+        .left-line {
+            position: absolute;
+            width: 20%;
+            transform: rotate(180deg);
+            bottom: 50%;
+            left: -10px;
+        }
+        .right-line {
+            position: absolute;
+            width: 20%;
+            top: 50%;
+            right: -10px;
+        }
+    }
+
+    @media (max-width: $xl) {
+        .about-skills {
+            .left-line {
+                transform: scaleX(-1);
+                right: 0px;
+                left: 70%;
+                width: 40%;
+                bottom: 0;
+            }
+            .right-line {
+                left: 70%;
+                width: 40%;
+                top: 0;
+            }
+        }
+    }
+
+    @media (max-width: $md) {
+        flex-direction: column;
+        .about-text {
+            width: calc(100% - 40px);
+        }
+
+        .about-skills {
+            height: 100vw;
+            width: calc(100%);
+
+            .skills-wheel {
+                .outer-circle {
+                    height: calc(100vw - 90px);
+                    width: calc(100vw - 90px);
+
+                    .inner-circle {
+                        height: calc(100vw - 200px);
+                        width: calc(100vw - 200px);
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@import "./_variables.scss";
+@import "./header.scss";
+@import "./hero.scss";
+@import "./button.scss";
+@import "./experience.scss";
+@import "./projects.scss";
+@import "./about.scss";
+@import "./contact.scss";
+@import "./footer.scss";
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background-color: $main_background_color;
+    font-family: "Inter", sans-serif;
+    cursor: url("/cursor.png") 4 12, auto;
+}
+
+#root {
+    max-width: 1500px;
+    margin: auto;
+    overflow: hidden;
+
+    padding: 0 100px;
+
+    @media (max-width: $lg) {
+        padding: 0 40px;
+    }
+    @media (max-width: $md) {
+        padding: 0 20px;
+    }
+
+    background-image: url("/grid2.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+
+::selection {
+    background: rgba(208, 177, 255, 0.5); /* highlight background color */
+}
+
+button,
+a {
+    cursor: url("/pointer.png") 2 2, pointer;
+}
+
+.gradient {
+    position: absolute;
+    z-index: 1;
+    mix-blend-mode: screen; // smoother than color-dodge
+    pointer-events: none;
+    filter: blur(30px); // makes it glow softly
+}
+
+.center {
+    translate: -50% -50%;
+}
+
+.section-title {
+    font-size: $lg_text_large;
+    color: $main_text_color;
+    text-align: center;
+    margin: 100px 0;
+    padding: 0;
+
+    span {
+        color: $secondary_text_color;
+    }
+
+    @media (max-width: $md) {
+        font-size: $md_text_large;
+    }
+
+    @media (max-width: $sm) {
+        font-size: $sm_text_large;
+    }
+
+    @media (max-width: $xs) {
+        font-size: $xs_text_large;
+    }
+}
+
+.title-in-section {
+    text-align: left;
+    margin: 0;
+}
+
+.grid-background-1 {
+    background-image: url("/grid1.svg");
+    // fade it in the bottom with a mask
+    //  WebKit-specific
+    -webkit-mask-image: linear-gradient(
+            to top,
+            rgba(0, 0, 0, 0) 0%,
+            rgb(0, 3, 25) 5%
+        ),
+        linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgb(0, 3, 25) 5%),
+        linear-gradient(to left, rgba(0, 0, 0, 0) 0%, rgb(0, 3, 25) 5%),
+        linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgb(0, 3, 25) 5%);
+    -webkit-mask-composite: destination-in;
+    mask-composite: intersect; // standard fallback
+}
+
+.grid-background-2 {
+    background-image: url("/grid2.svg");
+}
+
+.grid-background-1,
+.grid-background-2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}

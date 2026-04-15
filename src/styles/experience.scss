@@ -1,0 +1,98 @@
+@import "./_variables.scss";
+
+.experience-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    position: relative;
+
+    .balls {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0;
+        width: 100%;
+        pointer-events: none;
+
+        @media (max-width: $sm) {
+            top: 10%;
+            transform: rotate(90deg) translateY(50%);
+            width: 600px;
+            transform: rotate(90deg);
+        }
+        @media (max-width: $xs) {
+            top: 10%;
+            transform: rotate(90deg) translateY(50%);
+            width: 600px;
+        }
+    }
+
+    .experience {
+        position: relative;
+        background-color: $secondary_background_color;
+        border-radius: $border_radius;
+        height: 170px;
+        border: 1px solid $main_border_color;
+        width: calc(50% - 10px - 2px);
+        display: flex;
+        align-items: end;
+        overflow: hidden;
+
+        div {
+            margin: 0 20px;
+            transition: all 0.3s ease-in-out;
+            z-index: 3;
+
+            h3 {
+                color: $main_text_color;
+                font-size: $lg_text_medium;
+                margin: 0;
+            }
+
+            p {
+                color: $dark_text_color;
+                font-size: $lg_text_small;
+            }
+        }
+
+        img {
+            position: absolute;
+            z-index: 2;
+            pointer-events: none;
+        }
+
+        .experience-photo-1 {
+            top: 10px;
+            right: 10px;
+            height: 80px;
+            opacity: 0.8;
+        }
+
+        .experience-photo-2 {
+            top: 10px;
+            right: 10px;
+            height: 100px;
+            opacity: 0.6;
+        }
+
+        .experience-photo-3 {
+            top: 50%;
+            transform: translateY(-50%);
+            right: 0px;
+            height: 100%;
+        }
+    }
+    @media (max-width: $md) {
+        .experience {
+            width: 100%;
+        }
+    }
+
+    @media (max-width: $sm) {
+        flex-direction: column;
+    }
+
+    @media (max-width: $xs) {
+    }
+}
