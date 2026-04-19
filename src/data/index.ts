@@ -8,7 +8,10 @@ import tw from "../assets/tail.svg";
 // import vite from "../assets/vite.svg";
 import three from "../assets/three.svg";
 import scss from "../assets/scss.svg";
+import attendium from "../assets/attendium.png";
+import luminelle from "../assets/luminelle.png";
 import videocall from "../assets/videocall.webp";
+import voltfinder from "../assets/voltfinder.png";
 import firebase from "../assets/firebase.svg";
 // import hostinger from "../assets/hostinger.svg";
 // import wordpress from "../assets/wordpress.svg";
@@ -16,6 +19,11 @@ import webrtc from "../assets/webrtc.svg";
 import code from "../assets/code.svg";
 // import link from "../assets/link.svg";
 import git from "../assets/git.svg";
+import node from "../assets/nodejs.svg";
+import nest from "../assets/nestjs.svg";
+import postgresql from "../assets/postgresql.svg";
+import aws from "../assets/aws.svg";
+import express from "../assets/express.svg";
 import redux from "../assets/redux.svg";
 import html from "../assets/html.svg";
 import css from "../assets/css.svg";
@@ -39,11 +47,58 @@ export const heroContent = {
 
 export const projects = [
     {
+        img: attendium,
+        title: "Attendeum",
+        description:
+            "Event Management Platform",
+        codebaseUrl: "",
+        liveUrl: "https://attendium.com/",
+        techStack: [
+            { icon: next, name: "Next.js" },
+            { icon: ts, name: "Typescript" },
+            { icon: node, name: "Node.js" },
+            { icon: nest, name: "Nest.js" },
+            { icon: postgresql, name: "PostgreSQL" },
+            { icon: aws, name: "AWS" },
+        ],
+    },
+    {
+        img: luminelle,
+        title: "Luminelle",
+        description:
+            "Natural Skincare Brand Platform",
+        codebaseUrl: "",
+        liveUrl: "https://luminelle.org/",
+        techStack: [
+            { icon: react, name: "React" },
+            { icon: ts, name: "Typescript" },
+            { icon: node, name: "Node.js" },
+            { icon: express, name: "Express.js" },
+            { icon: postgresql, name: "PostgreSQL" },
+            { icon: aws, name: "AWS" },,
+        ],
+    },
+    {
+        img: voltfinder,
+        title: "More relevant EV charger finder",
+        description:
+            "A web application for finding the best electric car charging stations in Hungary",
+        codebaseUrl: "https://github.com/royaljs0311/voltfinder",
+        liveUrl: "https://voltfinder.hu/",
+        techStack: [
+            { icon: react, name: "React" },
+            { icon: ts, name: "Typescript" },
+            { icon: node, name: "Node.js" },
+            { icon: nest, name: "Nest.js" },
+            { icon: postgresql, name: "PostgreSQL" },
+        ],
+    },
+    {
         img: videocall,
         title: "Video Call App",
         description:
             "A video call app that allows users to make video calls with their friends and family in a P2P style. It uses WebRTC for the video streaming and Firebase for the backend.",
-        codebaseUrl: "",
+        codebaseUrl: "https://github.com/royaljs0311/videoCall",
         liveUrl: "https://soloconvo.vercel.app/",
         techStack: [
             { icon: ts, name: "Typescript" },
