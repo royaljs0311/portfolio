@@ -75,7 +75,7 @@ export const projects = [
             { icon: node, name: "Node.js" },
             { icon: express, name: "Express.js" },
             { icon: postgresql, name: "PostgreSQL" },
-            { icon: aws, name: "AWS" },,
+            { icon: aws, name: "AWS" },
         ],
     },
     {
